@@ -6,6 +6,7 @@ Raspberry Pi에서 열화상 센서와 GPIO 입력 신호를 이용해 인체 �
 raspberry-human-detection/
 ├── LEDcam.py
 ├── four.py
+├── LICENSE
 └── README.md
 ```
 
@@ -141,6 +142,15 @@ GPIO 21/26/20/16/19/13/12/6/5 → OR 집계 → GPIO17
 - Raspberry Pi GPIO에는 3.3V 논리 신호를 사용해야 합니다.
 - 외부 센서와 Raspberry Pi 사이에는 공통 GND가 필요합니다.
 - 입력 장치가 자체적으로 HIGH/LOW를 확실히 구동하지 않는 경우 입력이 떠 있을 수 있으므로 외부 풀업/풀다운 구성 확인이 필요합니다.
+
+## 출처 및 라이선스
+
+이 저장소의 `LEDcam.py`에서 사용하는 AMG88xx 열화상 보간·시각화 구조는 Adafruit의 공개 AMG8833 Raspberry Pi thermal camera 예제 계열을 참고해 정리·수정한 코드입니다.
+
+- Adafruit AMG8833 thermal camera guide/example: https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera
+- Adafruit example code/license: MIT License (원 저작권 및 라이선스 조건은 해당 원본 프로젝트를 따릅니다.)
+
+이 저장소에서 AIN108이 작성·수정한 코드 부분은 루트의 `LICENSE`에 명시한 MIT License로 배포합니다. 외부 라이브러리와 하드웨어 드라이버는 각 프로젝트의 별도 라이선스를 따릅니다.
 
 ## 참고
 
