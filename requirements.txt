@@ -1,0 +1,9 @@
+# Raspberry Pi / Python dependencies for the current legacy implementation.
+# LEDcam.py still imports the archived Adafruit_AMG88xx Python driver.
+# See README.md for the maintained CircuitPython migration note.
+
+git+https://github.com/adafruit/Adafruit_AMG88xx_python.git#egg=Adafruit_AMG88xx
+numpy>=1.21
+scipy>=1.7
+opencv-python>=4.5
+RPi.GPIO>=0.7
