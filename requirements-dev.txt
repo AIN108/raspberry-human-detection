@@ -1,0 +1,5 @@
+# 테스트용 의존성. RPi.GPIO·Adafruit_AMG88xx는 Raspberry Pi 전용이라 테스트에서는 스텁으로 대체한다.
+numpy>=1.21
+scipy>=1.7
+opencv-python-headless>=4.5
+pytest>=8,<10
