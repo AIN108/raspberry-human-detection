@@ -72,8 +72,12 @@ try:
         cv2.imshow("Heatmap", image)
 
         threshold_temperature = (MAXTEMP - MINTEMP) / 2 + MINTEMP
+        # bicubic은 0~COLORDEPTH-1 색상 인덱스로 변환된 값이므로 기준 온도도 같은 단위로 바꿔 비교한다.
+        threshold_index = map_range(
+            threshold_temperature, MINTEMP, MAXTEMP, 0, COLORDEPTH - 1
+        )
         percentage = (
-            np.sum(bicubic > threshold_temperature) / bicubic.size
+            np.sum(bicubic > threshold_index) / bicubic.size
         ) * 100
 
         detected = percentage > DETECTION_THRESHOLD_PERCENT
